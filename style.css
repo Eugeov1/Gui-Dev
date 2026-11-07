@@ -1,0 +1,664 @@
+/* =====================================
+   GUI DEV - ESTILO FUTURISTA
+   ===================================== */
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =====================================
+   CABEÇALHO
+   ===================================== */
+
+.cabecalho {
+    width: 100%;
+    padding: 20px 8%;
+    background: #050505;
+    border-bottom: 1px solid #252525;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 28px;
+    color: white;
+}
+
+.logo span {
+    color: #ff2020;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu a {
+    color: #cccccc;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff2020;
+    text-shadow: 0 0 10px #ff2020;
+}
+
+
+/* =====================================
+   SEÇÃO HERO
+   ===================================== */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 60px 8%;
+    gap: 40px;
+
+    background: #080808;
+    overflow: hidden;
+}
+
+.hero-conteudo {
+    flex: 1;
+}
+
+.hero-etiqueta {
+    color: crimson;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 7vw, 95px);
+    margin: 15px 0;
+    color: white;
+}
+
+.hero h1 span {
+    color: #ff2020;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: white;
+}
+
+.hero-descricao {
+    color: #aaaaaa;
+    font-size: 17px;
+    max-width: 550px;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+
+/* =====================================
+   FOTOGRAFIA
+   ===================================== */
+
+.hero-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-imagem img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+
+    border: 2px solid crimson;
+
+    box-shadow: 0 0 35px rgba(220, 20, 60, 0.35);
+}
+
+
+/* =====================================
+   BOTÕES HERO
+   ===================================== */
+
+.hero-botoes {
+    display: flex;
+    gap: 18px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.botao-principal,
+.botao-secundario {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-principal {
+    background: #ff2020;
+    color: white;
+    border: 1px solid #ff2020;
+}
+
+.botao-principal:hover {
+    background: transparent;
+    box-shadow: 0 0 20px #ff2020;
+    transform: translateY(-3px);
+}
+
+.botao-secundario {
+    background: transparent;
+    color: white;
+    border: 1px solid #ff2020;
+}
+
+.botao-secundario:hover {
+    background: #ff2020;
+    box-shadow: 0 0 20px #ff2020;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   SEÇÃO SOBRE MIM
+   ===================================== */
+
+.sobre {
+    min-height: 75vh;
+    padding: 100px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0c0c0c;
+}
+
+.sobre-conteudo {
+    max-width: 850px;
+    text-align: center;
+}
+
+.sobre-etiqueta {
+    color: #ff2020;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.sobre h2 {
+    font-size: 48px;
+    margin-bottom: 35px;
+    color: white;
+}
+
+.sobre h2 span {
+    color: #ff2020;
+}
+
+.sobre-conteudo p:not(.sobre-etiqueta) {
+    color: #aaaaaa;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   RESPONSIVIDADE
+   ===================================== */
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        padding: 18px 5%;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 6%;
+    }
+
+    .hero-conteudo {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .hero-descricao {
+        font-size: 15px;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    .hero-imagem img {
+        max-width: 300px;
+    }
+
+    .sobre {
+        padding: 70px 6%;
+    }
+
+    .sobre h2 {
+        font-size: 36px;
+    }
+
+}
+
+
+/* =====================================
+   SEÇÃO HABILIDADES
+   ===================================== */
+
+.habilidades {
+    min-height: 80vh;
+    padding: 100px 8%;
+    background: #080808;
+    text-align: center;
+}
+
+.habilidades-conteudo {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.habilidades-etiqueta {
+    color: #ff2020;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.habilidades h2 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.habilidades h2 span {
+    color: #ff2020;
+}
+
+.habilidades-descricao {
+    color: #aaaaaa;
+    font-size: 17px;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+.habilidades-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.habilidade-card {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 35px 20px;
+    transition: 0.3s;
+}
+
+.habilidade-card h3 {
+    color: #ff2020;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.habilidade-card p {
+    color: #aaaaaa;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.habilidade-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff2020;
+    box-shadow: 0 0 20px rgba(255, 32, 32, 0.25);
+}
+
+/* HABILIDADES NO CELULAR */
+
+@media (max-width: 768px) {
+
+    .habilidades {
+        padding: 70px 6%;
+    }
+
+    .habilidades h2 {
+        font-size: 36px;
+    }
+
+    .habilidades-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+    padding: 70px 6%;
+}
+
+.projetos h2 {
+    font-size: 36px;
+}
+
+.projetos-cards {
+    grid-template-columns: 1fr;
+}
+
+.contato {
+    padding: 70px 6%;
+}
+
+.contato h2 {
+    font-size: 36px;
+}
+
+.contato-cards {
+    grid-template-columns: 1fr;
+}
+
+}
+
+
+/* =====================================
+   SEÇÃO PROJETOS
+   ===================================== */
+
+.projetos {
+    min-height: 80vh;
+    padding: 100px 8%;
+    background: #0c0c0c;
+    text-align: center;
+}
+
+.projetos-conteudo {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.projetos-etiqueta {
+    color: #ff2020;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.projetos h2 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.projetos h2 span {
+    color: #ff2020;
+}
+
+.projetos-descricao {
+    color: #aaaaaa;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+
+.projetos-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: left;
+}
+
+.projeto-card {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.projeto-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff2020;
+    box-shadow: 0 0 20px rgba(255, 32, 32, 0.2);
+}
+
+.projeto-imagem {
+    height: 180px;
+    background: linear-gradient(135deg, #300000, #111111);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projeto-imagem span {
+    color: #ff2020;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.projeto-info {
+    padding: 25px;
+}
+
+.projeto-info h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.projeto-info p {
+    color: #aaaaaa;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.projeto-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.projeto-tecnologias span {
+    color: #ff2020;
+    background: #250b0b;
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.projeto-botao {
+    display: inline-block;
+    color: white;
+    background: #ff2020;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.projeto-botao:hover {
+    background: transparent;
+    outline: 1px solid #ff2020;
+    box-shadow: 0 0 15px #ff2020;
+}
+
+
+/* =====================================
+   SEÇÃO CONTATO
+   ===================================== */
+
+.contato {
+    min-height: 75vh;
+    padding: 100px 8%;
+    background: #080808;
+    text-align: center;
+}
+
+.contato-conteudo {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contato-etiqueta {
+    color: #ff2020;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.contato h2 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.contato h2 span {
+    color: #ff2020;
+}
+
+.contato-descricao {
+    color: #aaaaaa;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.contato-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contato-card {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 35px 20px;
+    transition: 0.3s;
+}
+
+.contato-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff2020;
+    box-shadow: 0 0 20px rgba(255, 32, 32, 0.25);
+}
+
+.contato-card h3 {
+    color: #ff2020;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.contato-card p {
+    color: #aaaaaa;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.contato-card a {
+    display: inline-block;
+    background: #ff2020;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contato-card a:hover {
+    background: transparent;
+    outline: 1px solid #ff2020;
+    box-shadow: 0 0 15px #ff2020;
+}
+
+.rodape {
+    background-color: #050505;
+    border-top: 1px solid #252525;
+    padding: 30px 8%;
+    text-align: center;
+}
+
+.rodape p {
+    color: #ff3333;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.rodape span {
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* ANIMAÇÃO DE ENTRADA */
+
+.animar {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animar.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
